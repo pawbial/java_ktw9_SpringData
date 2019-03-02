@@ -1,4 +1,4 @@
-package pl.sdacademy.springdata.SpringDataJDBC.model;
+package pl.sdacademy.springdata.SpringDataJDBC.person;
 
 public enum Proffesion {
 

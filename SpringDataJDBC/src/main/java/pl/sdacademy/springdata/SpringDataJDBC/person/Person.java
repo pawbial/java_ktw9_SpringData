@@ -1,12 +1,11 @@
-package pl.sdacademy.springdata.SpringDataJDBC.model;
+package pl.sdacademy.springdata.SpringDataJDBC.person;
 
 
-import com.sun.javafx.beans.IDProperty;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 @Data
 @Builder
@@ -18,6 +17,6 @@ public class Person {
     private String firstName;
     private String lastName;
     private Integer age;
-    private Date birthDate;
+    private LocalDate birthDate;
     private Proffesion proffesion;
 }
