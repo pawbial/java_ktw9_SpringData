@@ -113,7 +113,7 @@ public class CarTest {
     }
 
     @Test
-    public void shouldReturn2WhenExecutingGivenQuerry() {
+    public void shouldReturnTrueWhenExecutingGivenQuerry() {
         // Given
         mongoTemplate.dropCollection(Car.class);
 
@@ -147,14 +147,18 @@ public class CarTest {
         // When
         Query query = new Query();
         Query model = query.addCriteria(Criteria.where("hp").gte(130));
-        List<Car> cars = mongoTemplate.find(model, Car.class);
+        int size = mongoTemplate.find(model, Car.class).size();
 
         model.addCriteria(Criteria.where("brand").is("Toyota"));
-        List<Car> cars1 = mongoTemplate.find(model, Car.class);
+        int size1 = mongoTemplate.find(model, Car.class).size();
+
+        Query queryOrOperator = new Query().addCriteria(new Criteria().orOperator(Criteria.where("brand").is("VW"), Criteria.where("brand").is("Ford")));
+
+        int size2 = mongoTemplate.find(queryOrOperator, Car.class).size();
         // Then
-        assertThat(cars.size()).isEqualTo(2);
-        assertThat(cars1.size()).isEqualTo(1);
-        assertThat(mongoTemplate.find(model,Car.class).size()).isEqualTo(1);
+        assertThat(size).isEqualTo(2);
+        assertThat(size1).isEqualTo(1);
+        assertThat(size2).isEqualTo(2);
 
     }
 
