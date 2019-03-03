@@ -1,4 +1,4 @@
-package pl.sdacademy.spring_data_jpa.SpringDataJPA;
+package pl.sdacademy.springdatajpa.SpringDataJPA;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
