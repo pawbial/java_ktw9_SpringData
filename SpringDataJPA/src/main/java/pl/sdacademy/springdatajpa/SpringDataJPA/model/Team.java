@@ -16,6 +16,6 @@ public class Team {
 
     private String name;
 
-    @OneToMany
+    @OneToMany (cascade = CascadeType.REMOVE)
     private Set<Player> players;
 }
