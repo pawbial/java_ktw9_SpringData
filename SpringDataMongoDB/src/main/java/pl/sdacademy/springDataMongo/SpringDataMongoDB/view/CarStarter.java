@@ -1,5 +1,6 @@
 package pl.sdacademy.springDataMongo.SpringDataMongoDB.view;
 
+import com.sun.xml.internal.bind.v2.TODO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ public class CarStarter implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
 
         Car car1 = new Car();
         car1.setBrand("VW");

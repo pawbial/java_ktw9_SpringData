@@ -1,6 +1,7 @@
 package pl.sdacademy.springDataMongo.SpringDataMongoDB.model;
 
 
+import com.sun.xml.internal.bind.v2.TODO;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,4 +18,6 @@ public class Car {
     private Integer capacity;
     private Integer hp;
     private Double vMax;
+
+
 }
